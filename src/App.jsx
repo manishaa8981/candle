@@ -4,17 +4,17 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
 import LoginForm from "./pages/login&register/login.jsx";
 import RegisterForm from "./pages/login&register/register.jsx";
-import AboutUs from "./pages/aboutUs/aboutUs.jsx";
 import Cart from "./pages/cart/cart.jsx";
-import Contact from "./pages/contact/contact.jsx";
 import AdminProduct from "./pages/adminPages/adminProduct/adminProduct.jsx";
-import AdminSidebar from "./pages/adminPages/adminSidebar/adminSidebar.jsx";
+// import AdminSidebar from "./pages/adminPages/adminSidebar/adminSidebar.jsx";
 import AdminCustomer from "./pages/adminPages/adminCustomer/adminCustomer.jsx";
 import AdminOrder from "./pages/adminPages/adminOrder/adminOrder.jsx";
 import AdminCategory from "./pages/adminPages/adminCategory/adminCategory.jsx";
 import Category from "./pages/homePage/Category.jsx";
 import Homepage from "./pages/homePage/homepage.jsx";
 import HeroSection from "./pages/homePage/heroSection.jsx";
+import Carousel from "./pages/homePage/Caurosel.jsx";
+// import Sidebar from "./pages/component/sidebar.jsx";
 
 
 const queryClient = new QueryClient();
@@ -27,16 +27,16 @@ function App() {
       {path: "/", element: <Homepage/>},
       {path: "/LoginForm", element: <LoginForm/>},
       {path: "/RegisterForm", element: <RegisterForm/>},
-      {path: "/AboutUs", element: <AboutUs/>},
       {path: "/Cart", element: <Cart/>},
-      {path: "/Contact", element: <Contact/>},
+      // {path: "/Sidebar", element: <Sidebar/>},
       {path: "/AdminProduct", element: <AdminProduct/>},
-      {path: "/AdminSidebar", element: <AdminSidebar/>},
+      // {path: "/AdminSidebar", element: <AdminSidebar/>},
       {path: "/AdminOrder", element: <AdminOrder/>},
       {path: "/AdminCategory", element: <AdminCategory/>},
       {path: "/AdminCustomer", element: <AdminCustomer/>},
       {path: "/Category", element: <Category/>},
       {path: "/HeroSection", element: <HeroSection/>},
+      {path: "/cauroles", element: <Carousel/>},
 
 
 

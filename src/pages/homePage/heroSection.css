@@ -1,17 +1,16 @@
 .containerr{
-    width: 100%;
-    position: absolute;
-    transform: translate(-50% , -50%);
-    overflow: hidden;
-    top: 50%;
-    left: 50%;
-    border: black;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
 
 }
 .wrapperr{
+    flex: 0 0 auto;
     width: 100%;
-    display: flex;
-    animation: slide 16s infinite;
+    scroll-snap-align: start;
+    /*width: 100%;*/
+    /*display: flex;*/
+    /*animation: slide 16s infinite;*/
 }
 @keyframes slide {
     0%{

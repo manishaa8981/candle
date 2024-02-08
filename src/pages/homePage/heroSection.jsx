@@ -17,7 +17,7 @@ const HeroSection = () =>{
             <div className={"containerr"}>
                 {categories.map((i) => (
                     <div className={"wrapperr"}>
-                        <img src={'data:image/jpeg;base64,' + i.categoryImage} alt="Images"/>
+                        <img src={'data:image/jpeg;base64,' + i.categoryImage} alt={`Image ${i+ 1}`}/>
                     </div>
                 ))}
 
