@@ -12,10 +12,7 @@ import AdminOrder from "./pages/adminPages/adminOrder/adminOrder.jsx";
 import AdminCategory from "./pages/adminPages/adminCategory/adminCategory.jsx";
 import Category from "./pages/homePage/Category.jsx";
 import Homepage from "./pages/homePage/homepage.jsx";
-import HeroSection from "./pages/homePage/heroSection.jsx";
-import Carousel from "./pages/homePage/Caurosel.jsx";
-// import Sidebar from "./pages/component/sidebar.jsx";
-
+import Carousel from "./pages/Carousel/carousel.jsx";
 
 const queryClient = new QueryClient();
 
@@ -28,15 +25,13 @@ function App() {
       {path: "/LoginForm", element: <LoginForm/>},
       {path: "/RegisterForm", element: <RegisterForm/>},
       {path: "/Cart", element: <Cart/>},
-      // {path: "/Sidebar", element: <Sidebar/>},
       {path: "/AdminProduct", element: <AdminProduct/>},
       // {path: "/AdminSidebar", element: <AdminSidebar/>},
       {path: "/AdminOrder", element: <AdminOrder/>},
       {path: "/AdminCategory", element: <AdminCategory/>},
       {path: "/AdminCustomer", element: <AdminCustomer/>},
       {path: "/Category", element: <Category/>},
-      {path: "/HeroSection", element: <HeroSection/>},
-      {path: "/cauroles", element: <Carousel/>},
+      {path: "/Carousel", element: <Carousel/>},
 
 
 
