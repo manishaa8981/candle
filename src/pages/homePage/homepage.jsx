@@ -8,9 +8,9 @@ const Homepage = () =>{
     return(
         <>
             <HomeNavbar/>
-            <div className={"bgg"}>Welcomee</div>
-            <Category/>
             <Carousel />
+            <Category/>
+
         </>
     )
 }
