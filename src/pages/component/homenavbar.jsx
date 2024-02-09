@@ -36,32 +36,41 @@ const HomeNavbar = () => {
     return (
         <>
             {/*<header className={"flex justify-between h-18 items-center bg-transparent font-poppins w-100% rounded-t-md border-1 border-gray-200 shadow-gray-200  "}>*/}
-                <nav >
-                    <a href={"/"} className={"title"}>The Candle Library</a>
+            <nav>
+                <a href={"/"} className={"title"}>The Candle Library</a>
 
-                    <div className={"menu"} onClick={() =>{
-                        setMenuOpen(!menuOpen);
-                    }}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+                <div className={"menu"} onClick={() => {
+                    setMenuOpen(!menuOpen);
+                }}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
 
-                    <div className={"search"}><input className="search-bar" type="text" placeholder="Search" /></div>
-
-                    <ul className={menuOpen ? "open" : ""}>
-                        <li><Link to={"/Cart"}> <ShoppingBag className={"cart"}  size={"30px"}/></Link></li>
-
-                        <li><Link to={"/LoginForm"}><button className={"rounded-md border-none text-black"}>Login</button></Link></li>
-
-                        <li><Link to={"/RegisterForm"}><button className={"rounded-md border-none text-black"}>Sign Up</button></Link></li>
-                    </ul>
+                {/*<div className={"search"}><input className="search-bar" type="text" placeholder="Search" /></div>*/}
+                <div className="box">
+                    <i className="fa fa-search" aria-hidden="true"><Search/></i>
+                    <input type="text" placeholder="Search"/>
+                </div>
 
 
-                    {/*<div className={"btn-style"}>*/}
-                    {/*    <Link to={"/LoginForm"}> <h4  className={"rounded-md"}><a>VIEW PRODUCTS</a></h4></Link>*/}
-                    {/*</div>*/}
-                </nav>
+                <ul className={menuOpen ? "open" : ""}>
+                    <li><Link to={"/Cart"}> <ShoppingBag className={"cart"} size={"30px"}/></Link></li>
+
+                    <li><Link to={"/LoginForm"}>
+                        <button className={"rounded-md border-none text-black"}>Login</button>
+                    </Link></li>
+
+                    <li><Link to={"/RegisterForm"}>
+                        <button className={"rounded-md border-none text-black"}>Sign Up</button>
+                    </Link></li>
+                </ul>
+
+
+                {/*<div className={"btn-style"}>*/}
+                {/*    <Link to={"/LoginForm"}> <h4  className={"rounded-md"}><a>VIEW PRODUCTS</a></h4></Link>*/}
+                {/*</div>*/}
+            </nav>
             {/*</header>*/}
         </>
     );
