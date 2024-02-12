@@ -16,26 +16,6 @@
 @tailwind components;
 @tailwind utilities;
 
-button{
-  background-color: white;
-  border-color: rgb(108,117,125);
-  color: rgb(108,117,125);
-  font-weight: bold;
-  border-width: 1px;
-  height: 30px;
-  width: 6vw;
-  min-width: 120px;
-  border-radius: 3px;
-  cursor : pointer;
-  margin-right: 6px;
-  transition: background-color 0.15s, color 0.15s;
-}
-button:hover{
-  color: white;
-  background-color: rgb(108,117,125) ;
-}
-
-
 /*custom button style*/
 .btn-style{
   display: flex;

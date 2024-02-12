@@ -1,7 +1,10 @@
 import "./homenarbar.css"
 import {NavLink , Link} from "react-router-dom";
 import { Search , ShoppingBag} from 'lucide-react';
-import {useState} from "react";
+import {useEffect, useState} from "react";
+// import {CloseButton} f   rom "react-bootstrap";
+// import axios from "axios";
+// import {data} from "autoprefixer";
 // const HomeNavbar = () => {
 //     return (
 //         <>
@@ -33,9 +36,57 @@ import {useState} from "react";
 
 const HomeNavbar = () => {
     const [menuOpen , setMenuOpen] = useState(false);
+    // const [search , setSearch ] = useState("");
+    // const [product , setProduct] =useState([])
+    // const fetchProduct = async () => {
+    //     const response = await axios.get('http://localhost:8081/product/getAll');
+    //     setProduct(response.data);
+    //     console.log(response.data);
+    // }
+    // const handleChange = (e) => {
+    //     setSearch(e.target.value);
+    // }
+    // const handleClose = (e) => {
+    //     setSearch(e.target.value);
+    //     product([]);
+    //     setSelectedItem(-1)
+    // };
+    // const handlekeyDown = e =>{
+    //     if(selectedItem < product.length){
+    //         if(e.key === "ArrowUp" && selectedItem > 0){
+    //             setSelectedItem( prev => prev - 1)
+    //         }
+    //         else if
+    //         (e.key === "ArrowDown" && selectedItem < product.length-1){
+    //             setSelectedItem( prev => prev + 1)
+    //         }
+    //         else if(e.key === "Enter" && selectedItem >= 0){
+    //             product[selectedItem].show.value
+    //         }
+    //     }
+    //     else{
+    //        setSelectedItem(-1)
+    //     }
+    //
+    //
+    // }
+    //
+    //
+    // useEffect(() => {
+    //     if(search !== ""){
+    //         const newFilterData = data.filter(product =>{
+    //             return product.productName.toLowerCase().includes(search.toLowerCase())
+    //         })
+    //         setProduct(newFilterData)
+    //     }
+    //     else{
+    //         setProduct([]);
+    //     }
+    // }, []);
+
+
     return (
         <>
-            {/*<header className={"flex justify-between h-18 items-center bg-transparent font-poppins w-100% rounded-t-md border-1 border-gray-200 shadow-gray-200  "}>*/}
             <nav>
                 <a href={"/"} className={"title"}>The Candle Library</a>
 
@@ -54,24 +105,44 @@ const HomeNavbar = () => {
                 </div>
 
 
+                {/*<div className="box">*/}
+                {/*    <i className="fa fa-search" aria-hidden="true"><Search/>*/}
+                {/*    <CloseButton onclick={handleClose} />*/}
+                {/*    </i>*/}
+                {/*    <input type="text" placeholder="Search" className={"search-input"}*/}
+                {/*    autoComplete={"off"}*/}
+                {/*    value={search}*/}
+                {/*    onKeyDown={handlekeyDown}/>*/}
+                {/*</div>*/}
+                {/*<div className={"search-result"}>*/}
+                {/*{product.slice(0,10).map((data , index) => (*/}
+                {/*    <a*/}
+                {/*    key={index}*/}
+                {/*    href={data.link} // Adjust this according to your data structure*/}
+                {/*    target={"blank"}*/}
+                {/*    className={selectedItem === index ? "search-suggestion active" : "search-suggestion"} />),*/}
+                {/*   {data.productName}*/}
+                {/*    )*/}
+                {/* }*/}
+                {/*</div>*/}
+
                 <ul className={menuOpen ? "open" : ""}>
                     <li><Link to={"/Cart"}> <ShoppingBag className={"cart"} size={"30px"}/></Link></li>
 
                     <li><Link to={"/LoginForm"}>
-                        <button className={"rounded-md border-none text-black"}>Login</button>
+                        <button className={"login-button"}>Login</button>
                     </Link></li>
 
                     <li><Link to={"/RegisterForm"}>
-                        <button className={"rounded-md border-none text-black"}>Sign Up</button>
+                        <button className={"login-button"}>Sign Up</button>
                     </Link></li>
                 </ul>
-
-
-                {/*<div className={"btn-style"}>*/}
-                {/*    <Link to={"/LoginForm"}> <h4  className={"rounded-md"}><a>VIEW PRODUCTS</a></h4></Link>*/}
-                {/*</div>*/}
             </nav>
-            {/*</header>*/}
+
+            {/*<div className={"btn-style"}>*/}
+            {/*    <Link to={"/LoginForm"}> <h4  className={"rounded-md"}><a>VIEW PRODUCTS</a></h4></Link>*/}
+            {/*</div>*/}
+
         </>
     );
 };

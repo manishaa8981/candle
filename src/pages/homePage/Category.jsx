@@ -52,7 +52,7 @@ const Category = () =>{
             {/*    ))}*/}
             {/*</div>*/}
 
-            <h1 className={"text-5xl font-bold text-center"}>Our Collection</h1>
+            <h1 className={"text-5xl font-bold text-center "}>Our Collection</h1>
             <div className="mx-2 w-92% max-w-8.2xl items-center space-y-4 px-5 py-10 md:grid-cols-2 md:max-w-2xl  md:space-y-0 lg:grid-cols-4 flex justify-between ">
                 {categories.map((i) => (
                     <div key={i} className=" flex justify-evenly  relative aspect[16] mx-5 w-1/3 rounded-md md:aspect-auto md:h-[400px]">

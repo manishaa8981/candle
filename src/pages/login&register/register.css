@@ -81,12 +81,13 @@
     text-align: center;
     margin: 20px 0 15px;
 }
-.register-link p a{
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-}
-.register-link p a:hover{
-    text-decoration: underline;
 
+.login{
+    color:blue;
+    font-weight: 500;
+}
+.login:hover{
+    color:blue;
+    text-decoration: underline;
+    font-weight: 600;
 }
