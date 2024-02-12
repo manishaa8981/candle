@@ -126,7 +126,6 @@
 .cross-icon{
     display: flex;
     justify-content: space-between;
-
 }
 .wrapper .cross-icon .cross-button{
     width: fit-content;
