@@ -226,8 +226,25 @@
     color: white;
     background-color: rgb(6, 132, 245);
 }
-@media screen and (min-width: 768px) {
+@media (max-width: 767px) {
+    .cart-container{
+        width: 100%;
+        margin: 0;
+        height: auto;
+        border-radius: 0;
+    }
+.cart-items-container{
+    width: 90%;
+}
+.cart-text-div h1{
+    padding-left: 10px;
+    font-size: large;
+}
     .cart-heading-grid{
         display: none;
+    }
+    .cart-items-container{
+        display: flex;
+        flex-wrap: wrap;
     }
 }

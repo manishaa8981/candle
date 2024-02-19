@@ -101,7 +101,7 @@ const HomeNavbar = () => {
                 {/*<div className={"search"}><input className="search-bar" type="text" placeholder="Search" /></div>*/}
                 <div className="box">
                     <i className="fa fa-search" aria-hidden="true"><Search/></i>
-                    <input type="text" placeholder="Search"/>
+                    <input type="search" placeholder="Search"/>
                 </div>
 
 

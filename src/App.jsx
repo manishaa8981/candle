@@ -13,6 +13,8 @@ import Category from "./pages/homePage/Category.jsx";
 import Homepage from "./pages/homePage/homepage.jsx";
 import Carousel from "./pages/Carousel/carousel.jsx";
 import Cart from "./pages/cart/cart.jsx";
+import SidebarMenu from "./pages/adminPages/adminSidebar/adminSidebar.jsx";
+import AdminDashboard from "./pages/adminPages/adminSidebar/adminDashboard.jsx";
 
 
 const queryClient = new QueryClient();
@@ -33,6 +35,8 @@ function App() {
       {path: "/AdminCustomer", element: <AdminCustomer/>},
       {path: "/Category", element: <Category/>},
       {path: "/Carousel", element: <Carousel/>},
+      {path: "/SidebarMenu", element: <SidebarMenu/>},
+      {path: "/AdminDashboard", element: <AdminDashboard/>},
 
 
 

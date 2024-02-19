@@ -4,14 +4,14 @@
 :root {
     /*========== Colors ==========*/
     --title-color: #fff;
-    --text-color: hsl(235, 20%, 57%);
-    --shape-gradient: linear-gradient(90deg,
-    hsl(300, 76%, 60%),
-    hsl(57, 81%, 60%));
-    --body-gradient: linear-gradient(180deg,
-    hsl(22, 100%, 84%),
-    hsl(265, 100%, 80%));
-    --container-color: hsl(235, 32%, 10%);
+    /*--text-color: hsl(235, 20%, 57%);*/
+    /*--shape-gradient: linear-gradient(90deg,*/
+    /*hsl(300, 76%, 60%),*/
+    /*hsl(57, 81%, 60%));*/
+    /*--body-gradient: linear-gradient(180deg,*/
+    /*hsl(22, 100%, 84%),*/
+    /*hsl(265, 100%, 80%));*/
+    /*--container-color: hsl(235, 32%, 10%);*/
     /*========== Font and typography ==========*/
     --body-font: "Poppins", sans-serif;
     --biggest-font-size: 2.25rem;
@@ -19,16 +19,16 @@
 }
 
 /*=============== BASE ===============*/
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
+/** {*/
+/*    box-sizing: border-box;*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*}*/
 
-body {
-    font-family: var(--body-font);
-    color: var(--text-color);
-}
+/*body {*/
+/*    font-family: var(--body-font);*/
+/*    !*color: var(--text-color);*!*/
+/*}*/
 
 img {
     max-width: 100%;
@@ -40,8 +40,8 @@ img {
     width: 75%;
     display: grid;
     place-items: center;
-    background: var(--body-gradient);
-    padding-block: 4.5rem;
+    /*background: skyblue;*/
+    /*padding-block: 4.5rem;*/
     height: auto;
     right: -25%;
 }
@@ -53,12 +53,12 @@ img {
 }
 .card__article {
     position: relative;
-    background-color: var(--container-color);
+    background-color: lightgrey;
     padding: 2.5rem;
-    border-radius: 2rem;
+    border-radius: 10px;
     text-align: center;
     box-shadow: 0 20px 24px hsla(235, 32%, 15%, 0.2);
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .card__img {
     object-fit: cover;
@@ -75,25 +75,8 @@ img {
     font-size:0.8rem;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;
+    /*text-overflow: ellipsis;*/
 }
-
-
-
-/* Animation img */
-
-/*@keyframes float-img {*/
-/*    0% {*/
-/*        transform: translateY(0);*/
-/*    }*/
-/*    50% {*/
-/*        transform: translateY(-0.75rem);*/
-/*    }*/
-/*    100% {*/
-/*        transform: translateY(0);*/
-/*    }*/
-/*}*/
-
 /* Animation shape */
 .card__article:hover .card__shape {
     animation-name: shape-animate;
