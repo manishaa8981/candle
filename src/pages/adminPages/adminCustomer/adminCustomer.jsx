@@ -60,7 +60,6 @@ const AdminCustomer = () =>{
             </header>
             <div className={"customer-page-main"}>
                 <div className={"no-of-customer"}>
-                    <h2>No. of Customer: {userLength}</h2>
                 </div>
                 <table className={"customer-table"}>
                     <thead>

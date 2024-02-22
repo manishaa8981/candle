@@ -5,23 +5,23 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
-import slider1 from '../../assets/slide1.jpg';
-import slider2 from '../../assets/img_1.png';
-import slider3 from '../../assets/slider3.jpeg';
-import slider4 from '../../assets/slider4.jpeg';
-import slider5 from '../../assets/slider5.jpeg';
+import slider1 from '../../assets/img_1.png';
+import slider2 from '../../assets/img_3.png';
+import slider3 from '../../assets/img_2.png';
+import slider4 from '../../assets/img_5.png';
+import slider5 from '../../assets/img_6.png';
 
  function Carousel() {
      const slideStyles = {
          backgroundSize: 'cover',
          backgroundRepeat: 'no-repeat',
-         backgroundPosition: 'center',
-         minHeight: '400px',
+         backgroundPosition: '',
+         minHeight: '600px',
      };
     return (
         <>
-            <div className="swiper-container" >
-                <Swiper
+            <div className="swiper-container">
+                <Swiper style={{height:400}}
                     modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                     spaceBetween={50}
                     slidesPerView={1}
@@ -44,6 +44,9 @@ import slider5 from '../../assets/slider5.jpeg';
                             {/*    <h1 className="text-6xl font-bold"><span className="text-[#82b041]">Abroad Dreams</span> is Your Passport to a World of Education</h1>*/}
                             {/*    <p className="py-6 text-xl">Your One-Stop Solution for Managing Profiles Online.</p>*/}
                             {/*</div>*/}
+                            <button className={"btn-style"}>
+                                View More
+                            </button>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide style={{...slideStyles, backgroundImage: `url(${slider3})`, height: '100%'}}>

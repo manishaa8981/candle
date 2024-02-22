@@ -49,7 +49,7 @@ const AdminCategory = () =>  {
 
 
     const useApiCall = useMutation({
-        mutationKey:["POST_CATEGORY_MANAGECATEGORY"],
+        mutationKey:["POST_CATEGORY"],
         mutationFn:(payload)=>{
             console.log(payload)
             return axios.post("http://localhost:8081/category/save",payload)
@@ -77,7 +77,7 @@ const AdminCategory = () =>  {
     const{data,refetch} = useQuery({
         queryKey:["GETDATA"],
         queryFn(){
-            return axios.get("http://localhost:8081/category/findAll")
+            return axios.get("http://localhost:8081/category/getAll")
         }
     })
 
@@ -122,7 +122,7 @@ const AdminCategory = () =>  {
             <h1>Category</h1>
 
             <div className={"search-wrapper2"}>
-                <span><FaSearch /></span>
+                <span ><FaSearch /></span>
                 <input type={"search"} placeholder={"Search Category"} value={search} onChange={(e)=> setSearch(e.target.value)}/>
             </div>
         </header>

@@ -58,11 +58,11 @@ function AdminDashboard(){
                     <header className={"dashboard-header"}>
                         <h1>Dashboard</h1>
                         <div className={"user-wrapper"}>
-                            <img src={"https://images.pexels.com/photos/14073969/pexels-photo-14073969.jpeg?auto=compress&cs=tinysrgb&w=800"} width={"40px"} height={"40px"} alt={"N"}/>
-                            <div>
-                                <h4>Admin</h4>
-                                <small>{user.username}</small>
-                            </div>
+                            <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlUHrcJHNGb2QFr-H9tbXE9BJt2-TltAL0Ng&usqp=CAU"} width={"40px"} height={"40px"} alt={"N"}/>
+                            {/*<div>*/}
+                            {/*    <h4>Admin</h4>*/}
+                            {/*    <small>{user.username}</small>*/}
+                            {/*</div>*/}
                         </div>
                     </header>
 

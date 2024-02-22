@@ -1,11 +1,9 @@
-// ProductCard.js
-
 import './ProductCard.css';
 import {useEffect, useState} from "react";
-import { FaRegHeart } from "react-icons/fa";
-// import axios from "axios"; // Import your CSS file
+import { FaHeart } from "react-icons/fa";
+import axios from "axios";
 
-const ProductCard = () => {
+const ProductCard = ({ productData }) => {
     const [product,setProduct] = useState([]);
 
     const fetchProducts = async () => {
@@ -39,8 +37,10 @@ const ProductCard = () => {
                         </div>
                     </aside>
                 </div>
-
+                {/*<div className={"mid-div"}></div>*/}
                 <div className="card">
+                    <p className={"text-5xl mt-0 font-bold"}>Our collection</p>
+
                     <div className="card__container">
                         {product.map((i) => (
                             <article key={i} className="card__article">
@@ -48,7 +48,7 @@ const ProductCard = () => {
                                     <img src={'data:image/jpeg;base64,' + i.productImage} alt="card image"
                                          className="card__img"/>
                                     <h3 className="card__title">{i.productName}</h3>
-                                    <p className="card__description">{i.productDescription}</p>
+                                    <p className="card__price">{i.productPrice}</p>
                                     <div className={"buttonss"}>
                                         <button className="add-to-cart-btn"
                                                 onClick={() => handleAddToCart('Shield & Shining Star')}>
@@ -57,7 +57,7 @@ const ProductCard = () => {
                                         <button
                                             className={`heart-button ${isFavorite ? 'favorite' : ''}`}
                                             onClick={handleFavoriteClick} color={"red"}>
-                                            <FaRegHeart/>
+                                            <FaHeart/>
                                         </button>
                                     </div>
                                 </div>
@@ -66,10 +66,10 @@ const ProductCard = () => {
 
                         <article className="card__article">
                             <div className="card__data">
-                                <img src="src/assets/img.png" alt="card image" className="card__img"/>
+                                <img src="src/assets/img_1.png" alt="card image" className="card__img"/>
 
                                 <h3 className="card__title">Fire Light Sword</h3>
-                                <p className="card__description">element represents a paragraph. Paragraphs are usually represented in visual media as blocks of text separated from adjacent blocks by blank lines and/or first-line indentation, but HTML paragraphs can be any structural grouping of related content, such as images or form fields.</p>
+                                <p className="card__price">Rs 230</p>
                                 <div className={"buttonss"}>
                                     <button className="add-to-cart-btn"
                                             onClick={() => handleAddToCart('Shield & Shining Star')}>
@@ -78,16 +78,16 @@ const ProductCard = () => {
                                     <button
                                         className={`heart-button ${isFavorite ? 'favorite' : ''}`}
                                         onClick={handleFavoriteClick} color={"red"}>
-                                        <FaRegHeart/>
+                                        <FaHeart/>
                                     </button>
                                 </div>
                             </div>
                         </article>
                         <article className="card__article">
                             <div className="card__data">
-                                <img src="src/assets/img.png" alt="card image" className="card__img"/>
+                                <img src="src/assets/img_1.png" alt="card image" className="card__img"/>
                                 <h3 className="card__title">Incoming Messages</h3>
-                                <p className="card__description">Beautiful card, with hover effects</p>
+                                <p className="card__price">Rs 870</p>
                                 <div className={"buttonss"}>
                                     <button className="add-to-cart-btn"
                                             onClick={() => handleAddToCart('Shield & Shining Star')}>
@@ -96,27 +96,7 @@ const ProductCard = () => {
                                     <button
                                         className={`heart-button ${isFavorite ? 'favorite' : ''}`}
                                         onClick={handleFavoriteClick} color={"red"}>
-                                        <FaRegHeart/>
-                                    </button>
-                                </div>
-                            </div>
-
-                        </article>
-                        <article className="card__article">
-                            <div className="card__data">
-                                <img src="src/assets/img.png" alt="card image" className="card__img"/>
-
-                                <h3 className="card__title">Incoming Messages</h3>
-                                <p className="card__description">Beautiful card, with hover effects</p>
-                                <div className={"buttonss"}>
-                                    <button className="add-to-cart-btn"
-                                            onClick={() => handleAddToCart('Shield & Shining Star')}>
-                                        Add to Cart
-                                    </button>
-                                    <button
-                                        className={`heart-button ${isFavorite ? 'favorite' : ''}`}
-                                        onClick={handleFavoriteClick} color={"red"}>
-                                        <FaRegHeart/>
+                                        <FaHeart/>
                                     </button>
                                 </div>
                             </div>
@@ -124,10 +104,10 @@ const ProductCard = () => {
                         </article>
                         <article className="card__article">
                             <div className="card__data">
-                                <img src="src/assets/img.png" alt="card image" className="card__img"/>
+                                <img src="src/assets/img_1.png" alt="card image" className="card__img"/>
 
                                 <h3 className="card__title">Incoming Messages</h3>
-                                <p className="card__description">Beautiful card, with hover effects</p>
+                                <p className="card__price">Rs 750</p>
                                 <div className={"buttonss"}>
                                     <button className="add-to-cart-btn"
                                             onClick={() => handleAddToCart('Shield & Shining Star')}>
@@ -136,7 +116,7 @@ const ProductCard = () => {
                                     <button
                                         className={`heart-button ${isFavorite ? 'favorite' : ''}`}
                                         onClick={handleFavoriteClick} color={"red"}>
-                                        <FaRegHeart/>
+                                        <FaHeart/>
                                     </button>
                                 </div>
                             </div>
@@ -144,10 +124,10 @@ const ProductCard = () => {
                         </article>
                         <article className="card__article">
                             <div className="card__data">
-                                <img src="src/assets/img.png" alt="card image" className="card__img"/>
+                                <img src="src/assets/img_1.png" alt="card image" className="card__img"/>
 
                                 <h3 className="card__title">Incoming Messages</h3>
-                                <p className="card__description">Beautiful card, with hover effects</p>
+                                <p className="card__price">Rs 560</p>
                                 <div className={"buttonss"}>
                                     <button className="add-to-cart-btn"
                                             onClick={() => handleAddToCart('Shield & Shining Star')}>
@@ -156,7 +136,7 @@ const ProductCard = () => {
                                     <button
                                         className={`heart-button ${isFavorite ? 'favorite' : ''}`}
                                         onClick={handleFavoriteClick} color={"red"}>
-                                        <FaRegHeart/>
+                                        <FaHeart/>
                                     </button>
                                 </div>
                             </div>
@@ -164,10 +144,10 @@ const ProductCard = () => {
                         </article>
                         <article className="card__article">
                             <div className="card__data">
-                                <img src="src/assets/img.png" alt="card image" className="card__img"/>
+                                <img src="src/assets/img_1.png" alt="card image" className="card__img"/>
 
                                 <h3 className="card__title">Incoming Messages</h3>
-                                <p className="card__description">Beautiful card, with hover effects</p>
+                                <p className="card__price">Rs 550</p>
                                 <div className={"buttonss"}>
                                     <button className="add-to-cart-btn"
                                             onClick={() => handleAddToCart('Shield & Shining Star')}>
@@ -176,7 +156,27 @@ const ProductCard = () => {
                                     <button
                                         className={`heart-button ${isFavorite ? 'favorite' : ''}`}
                                         onClick={handleFavoriteClick} color={"red"}>
-                                        <FaRegHeart/>
+                                        <FaHeart/>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                        <article className="card__article">
+                            <div className="card__data">
+                                <img src="src/assets/img_1.png" alt="card image" className="card__img"/>
+
+                                <h3 className="card__title">Incoming Messages</h3>
+                                <p className="card__price">Rs 500</p>
+                                <div className={"buttonss"}>
+                                    <button className="add-to-cart-btn"
+                                            onClick={() => handleAddToCart('Shield & Shining Star')}>
+                                        Add to Cart
+                                    </button>
+                                    <button
+                                        className={`heart-button ${isFavorite ? 'favorite' : ''}`}
+                                        onClick={handleFavoriteClick} color={"red"}>
+                                        <FaHeart/>
                                     </button>
                                 </div>
                             </div>

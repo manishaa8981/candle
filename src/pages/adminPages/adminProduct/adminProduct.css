@@ -1,5 +1,5 @@
 .add-item-page{
-    background: rgba(190, 154, 124, 0.81);
+    background: rgba(213, 176, 136, 0.55);
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -12,8 +12,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 1.5rem;
-    background-color: white;
+    /*background-color: white;*/
     border-radius: 5px;
+    border-bottom: 2px solid black;
     font-weight: bold;
     box-shadow: 10px 10px 10px -1px rgba(119, 111, 93, 0.52);
 }
@@ -35,19 +36,21 @@
 .search-wrapper2{
     font-size: 16px;
     font-weight: normal;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
     border-radius: 30px;
     height: 50px;
     width: 20vw;
     display: flex;
     align-items: center;
     overflow-x: hidden;
+    background-color: transparent;
 }
 
 .search-wrapper2 span{
     display: inline-block;
     padding: 0.7rem 0 0 1rem;
     margin-bottom: 7px;
+    color: white;
 }
 
 .search-wrapper2 input{
@@ -56,6 +59,8 @@
     letter-spacing: 0.6px;
     border: none;
     outline: none;
+    color: white;
+    background-color: transparent;
 }
 .btn3{
     height: 9vh;
@@ -82,7 +87,8 @@
     width: fit-content;
     border-radius: 10px;
     height: 40px;
-    margin: auto;
+    margin: auto;    background-color: #e7dfd8;
+
 }
 .table-bordered3 th{
     font-size: 1rem;

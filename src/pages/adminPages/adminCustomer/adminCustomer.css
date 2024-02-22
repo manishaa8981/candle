@@ -1,6 +1,6 @@
 
 .customer-page{
-    background: rgba(190, 154, 124, 0.81);
+    background: rgba(213, 176, 136, 0.55);
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -13,7 +13,7 @@
     align-items: center;
     padding: 1rem 1.5rem;
     margin-top: 4px;
-    background-color: white;
+    border-bottom: 2px solid black;
     border-radius: 5px;
     box-shadow: 10px 10px 10px -1px rgba(119, 111, 93, 0.52);
     font-weight: bold;
@@ -28,6 +28,7 @@
 }
 
 .id-box3{
+    width: 4px;
     min-width: 6rem;
 }
 .name-box3{
@@ -45,21 +46,24 @@
     justify-content: start  ;
 }
 .search-wrapper2{
+    font-family: Poppins;
     font-size: 16px;
     font-weight: normal;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
     border-radius: 30px;
     height: 50px;
     width: 20vw;
     display: flex;
     align-items: center;
     overflow-x: hidden;
+    color: white;
 }
 
 .search-wrapper2 span{
     display: inline-block;
     padding: 0.7rem 0 0 1rem;
     margin-bottom: 7px;
+    color: white;
 }
 
 .search-wrapper2 input{
@@ -68,6 +72,8 @@
     letter-spacing: 0.6px;
     border: none;
     outline: none;
+    background-color: transparent;
+    color: white;
 }
 .customer-table{
     display: flex;
@@ -77,10 +83,7 @@
     width: fit-content;
     border-radius: 10px;
     height: 40px;
-    margin: auto;
-}
-
-.id-box3{
-    width: 4px;
+    margin: auto;    background-color: #e7dfd8;
 
 }
+

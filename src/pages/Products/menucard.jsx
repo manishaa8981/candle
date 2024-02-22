@@ -45,7 +45,7 @@ const MenuCard = ({ menuData }) => {
         <>
             <section className="menu-card--cointainer">
                 {menuData && menuData.length > 0 ? (
-                    menuData.map((curElem: any) => (
+                    menuData.map((curElem:any) => (
                         <div className="menu-card-container" key={curElem?.id}>
                             <div className="menu-card">
                                 <div className="menu-card-body">

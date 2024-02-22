@@ -127,15 +127,15 @@ const HomeNavbar = () => {
                 {/*</div>*/}
 
                 <ul className={menuOpen ? "open" : ""}>
-                    <li><Link to={"/Cart"}> <ShoppingBag className={"cart"} size={"30px"}/></Link></li>
+                    <li><NavLink to={"/Cart"}> <ShoppingBag className={"cart"} size={"30px"}/></NavLink></li>
 
-                    <li><Link to={"/LoginForm"}>
-                        <button className={"login-button"}>Login</button>
-                    </Link></li>
+                    <li><NavLink to={"/LoginForm"}>
+                        <button className={"login-button"} >Login</button>
+                    </NavLink></li>
 
-                    <li><Link to={"/RegisterForm"}>
+                    <li><NavLink to={"/RegisterForm"}>
                         <button className={"login-button"}>Sign Up</button>
-                    </Link></li>
+                    </NavLink></li>
                 </ul>
             </nav>
 

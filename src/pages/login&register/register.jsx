@@ -9,6 +9,7 @@ import { FaLock } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 
 import {useNavigate} from "react-router-dom";
+import {ToastContainer} from "react-toastify";
 
 const RegisterForm = () => {
 
@@ -65,20 +66,44 @@ const RegisterForm = () => {
                         </div>
                         <div className={"input-box"}>
                             <input type={"email"} placeholder={"Email"} {...register("email")}/>
+                            {errors.email && (
+                            <p className="error-message">{errors?.email?.message}
+                            </p>
+                        )}
                             <MdEmail className={"icon"}/>
                         </div>
                         <div className={"input-box"}>
-                            <input type={"password"} placeholder={"Password"} {...register("password")}/>
+                            <input type={"password"} placeholder={"Password"}  {...register("password", {
+                                required: "Password is required!!",
+                                minLength: {
+                                    value: 6,
+                                    message: "Password should be at least 6 characters long",
+                                },
+                            })}/>
+                            {errors.password && (
+                                <p className="error-message">{errors?.password?.message}</p>
+                            )}
                             <FaLock className={"icon"}/>
                         </div>
                         <div className={"input-box"}>
-                            <input type={"password"} placeholder={"Confirm Password"} required/>
+                            <input type={"password"} placeholder={"Confirm Password"} {...register("confirmPassword", {
+                                required: "Confirm Password is required",
+                                validate: {
+                                    matchesPassword: (value) =>
+                                        value === watch("password") || "Confirm Password does not match Password",
+                                },
+                            })}/>
+                            {errors.confirmPassword && (
+                                <p className="error-message">{errors?.confirmPassword?.message}
+                                </p>
+                            )}
                             <FaLock className={"icon"}/>
                         </div>
                         <button className={"login-button"} type={"submit"}>Sign Up</button>
                         <div className={"register-link"}>
                             <p>Already have an account? <a  className={"login"} href={"/LoginForm"}>Login</a></p>
                         </div>
+                        <ToastContainer/>
                     </form>
                 </div>
             </div>

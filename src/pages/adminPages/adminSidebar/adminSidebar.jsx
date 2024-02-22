@@ -3,7 +3,6 @@
 import "./adminSidebar.css"
 import {MdSpaceDashboard, } from "react-icons/md";
 import { BiSolidCategoryAlt} from "react-icons/bi";
-import {TiHome} from "react-icons/ti";
 import {IoMdLogOut} from "react-icons/io";
 import {FaBowlFood} from "react-icons/fa6";
 import {Link} from "react-router-dom"
@@ -47,7 +46,7 @@ const SidebarMenu=({ activePage }) => {
                             </li>
                         </Link>
                         <Link to={"/AdminOrder"}>
-                            <li className={`sidebar-list-item ${activePage === "##AdminOrder" ? "active" : ""}`}>
+                            <li className={`sidebar-list-item ${activePage === "/AdminOrder" ? "active" : ""}`}>
                                 <span><IoNewspaper style={{fontSize:"18px",marginBottom:"-3px"}}/></span>
                                 <a>Orders</a>
                             </li>
