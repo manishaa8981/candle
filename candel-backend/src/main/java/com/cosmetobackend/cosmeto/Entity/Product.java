@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-@SuppressWarnings("JpaAttributeTypeInspection")
+
 @Entity
 @Table(name="products")
 @Getter
@@ -13,12 +13,11 @@ import lombok.Setter;
 public class Product {
 
     @Id
-    @SequenceGenerator(name = "product_seq_gen", sequenceName = "product_id_seq", allocationSize = 1)
-    @GeneratedValue(generator = "product_seq_gen", strategy = GenerationType.SEQUENCE)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
-    @Column(name="Product_name", nullable=false)
-    private String ProductName;
+    @Column(name="product_name", nullable=false , unique = true)
+    private String productName;
 
     @Column(name="description", nullable=false)
     private String productDescription;
@@ -26,17 +25,10 @@ public class Product {
     @Column(name="product_price", nullable=false)
     private Integer productPrice;
 
-    @Column(name="status", nullable=false)
-    private String status;
+    @Column(name="product_image", nullable = false)
+    private String productImage;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="category_id", referencedColumnName = "id")
     private Category category;
-
-    
-
-
-
-
-
 }

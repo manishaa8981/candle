@@ -1,4 +1,4 @@
-package com.cosmetobackend.cosmeto.utils;
+package com.cosmetobackend.cosmeto.util;
 
 import java.io.File;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.Base64;
 public class ImageToBase64 {
 
     public String getImageBase64(String fileName) {
-        String filePath = "image_uploads/";
+        String filePath = System.getProperty("user.dir") + "/Candel-Images/";
         File file = new File(filePath + fileName);
         byte[] bytes = new byte[0];
         try {

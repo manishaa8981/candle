@@ -3,11 +3,14 @@ package com.cosmetobackend.cosmeto.Controller;
 import com.cosmetobackend.cosmeto.Entity.User;
 import com.cosmetobackend.cosmeto.Pojo.UserPojo;
 import com.cosmetobackend.cosmeto.Service.UserService;
+import com.cosmetobackend.cosmeto.helper.ApiResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 
@@ -17,11 +20,15 @@ import java.util.Optional;
 public class UserController {
 
     private final UserService userService;
+    private final ApiResponse apiResponse;
 
     @PostMapping("/save")
-    public String save(@Valid @RequestBody UserPojo userPojo){
-        userService.save(userPojo);
-        return "Register successfully";
+    public ResponseEntity<Map<String, Object>> save(@Valid @RequestBody UserPojo userPojo){
+
+        return apiResponse.successResponse("Data Saved Successfully",true,null,userService.save(userPojo));
+
+//        userService.save(userPojo);
+//        return "Register successfully";
     }
 
     @GetMapping("/getAll")
