@@ -19,7 +19,7 @@ public class OrderPojo {
     private Long userId;
 
     @NotNull
-    private Long itemId;
+    private Integer productId;
 
     @NotNull
     private Integer salesQuantity;

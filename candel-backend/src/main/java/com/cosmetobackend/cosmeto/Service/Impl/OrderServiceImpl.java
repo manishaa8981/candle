@@ -35,9 +35,9 @@ public class OrderServiceImpl implements OrderService {
         User user=userRepository.findById(orderPojo.getUserId()).get();
         order.setUser(user);
 
-        Product product=productRepository.findById(orderPojo.getId()).get();
+        Product product=productRepository.findById(orderPojo.getProductId()).get();
 
-         orderRepository.save(order);
+        orderRepository.save(order);
     }
 
     @Override

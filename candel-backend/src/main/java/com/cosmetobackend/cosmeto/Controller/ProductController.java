@@ -7,11 +7,13 @@ import com.cosmetobackend.cosmeto.Service.ProductService;
 
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
-
+@Service
 @RestController
 @RequestMapping("product")
 @RequiredArgsConstructor
@@ -19,10 +21,10 @@ public class ProductController {
 
     private final ProductService productService;
 
-    @PostMapping("save")
-    public String saveUser(@RequestBody ProductPojo productPojo) {
+    @PostMapping("/save")
+    public String saveUser(@ModelAttribute ProductPojo productPojo) throws IOException {
         productService.save(productPojo);
-        return "in this section";
+        return "Product Saved";
     }
 
     @GetMapping("/getAll")
@@ -31,13 +33,12 @@ public class ProductController {
     }
 
     @GetMapping("/getById/{id}")
-    public Optional<Product> getById(@PathVariable("id") Long id) {
+    public Optional<Product> getById(@PathVariable("id") Integer id) {
         return this.productService.getById(id);
     }
 
     @DeleteMapping("/delete/{id}")
-    public void deleteById(@PathVariable("id") Long id) {
-
+    public void deleteById(@PathVariable("id") Integer id) {
         this.productService.deleteById(id);
     }
 

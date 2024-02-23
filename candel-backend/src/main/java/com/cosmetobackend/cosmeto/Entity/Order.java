@@ -20,8 +20,11 @@ public class Order {
 
     @ManyToOne
     @JoinColumn(name="product_id")
-    private Product product;
+    private Product productId;
 
     @Column(name="sales_quantity", nullable=false)
     private Integer salesQuantity;
+
+    @Column(name="total_price", nullable = false)
+    private Integer totalPrice;
 }
